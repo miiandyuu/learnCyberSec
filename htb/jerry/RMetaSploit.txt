@@ -1,0 +1,28 @@
+Matching Modules
+================
+
+   #   Name                                                  Disclosure Date  Rank       Check  Description
+   -   ----                                                  ---------------  ----       -----  -----------
+   0   auxiliary/dos/http/apache_commons_fileupload_dos      2014-02-06       normal     No     Apache Commons FileUpload and Apache Tomcat DoS
+   1   exploit/multi/http/struts_dev_mode                    2012-01-06       excellent  Yes    Apache Struts 2 Developer Mode OGNL Execution
+   2   exploit/multi/http/struts2_namespace_ognl             2018-08-22       excellent  Yes    Apache Struts 2 Namespace Redirect OGNL Injection
+   3   exploit/multi/http/struts_code_exec_classloader       2014-03-06       manual     No     Apache Struts ClassLoader Manipulation Remote Code Execution
+   4   auxiliary/admin/http/tomcat_ghostcat                  2020-02-20       normal     Yes    Apache Tomcat AJP File Read
+   x5   exploit/windows/http/tomcat_cgi_cmdlineargs           2019-04-10       excellent  Yes    Apache Tomcat CGIServlet enableCmdLineArguments Vulnerability
+   6   exploit/multi/http/tomcat_mgr_deploy                  2009-11-09       excellent  Yes    Apache Tomcat Manager Application Deployer Authenticated Code Execution
+   7   exploit/multi/http/tomcat_mgr_upload                  2009-11-09       excellent  Yes    Apache Tomcat Manager Authenticated Upload Code Execution
+   8   auxiliary/dos/http/apache_tomcat_transfer_encoding    2010-07-09       normal     No     Apache Tomcat Transfer-Encoding Information Disclosure and DoS
+   x9   auxiliary/scanner/http/tomcat_enum                                     normal     No     Apache Tomcat User Enumeration
+   10  exploit/linux/local/tomcat_rhel_based_temp_priv_esc   2016-10-10       manual     Yes    Apache Tomcat on RedHat Based Systems Insecure Temp Config Privilege Escalation
+   11  exploit/linux/local/tomcat_ubuntu_log_init_priv_esc   2016-09-30       manual     Yes    Apache Tomcat on Ubuntu Log Init Privilege Escalation
+   12  exploit/windows/http/cayin_xpost_sql_rce              2020-06-04       excellent  Yes    Cayin xPost wayfinder_seqid SQLi to RCE
+   13  exploit/multi/http/cisco_dcnm_upload_2019             2019-06-26       excellent  Yes    Cisco Data Center Network Manager Unauthenticated Remote Code Execution
+   14  exploit/linux/http/cpi_tararchive_upload              2019-05-15       excellent  Yes    Cisco Prime Infrastructure Health Monitor TarArchive Directory Traversal Vulnerability
+   15  exploit/linux/http/cisco_prime_inf_rce                2018-10-04       excellent  Yes    Cisco Prime Infrastructure Unauthenticated Remote Code Execution
+   16  exploit/multi/http/spring_framework_rce_spring4shell  2022-03-31       manual     Yes    Spring Framework Class property RCE (Spring4Shell)
+   !17  auxiliary/admin/http/tomcat_administration                             normal     No     Tomcat Administration Tool Default Access
+   18  auxiliary/scanner/http/tomcat_mgr_login                                normal     No     Tomcat Application Manager Login Utility
+   19  exploit/multi/http/tomcat_jsp_upload_bypass           2017-10-03       excellent  Yes    Tomcat RCE via JSP Upload Bypass
+   x20  auxiliary/admin/http/tomcat_utf8_traversal            2009-01-09       normal     No     Tomcat UTF-8 Directory Traversal Vulnerability
+   21  auxiliary/admin/http/trendmicro_dlp_traversal         2009-01-09       normal     No     TrendMicro Data Loss Prevention 5.5 Directory Traversal
+   22  post/windows/gather/enum_tomcat                                        normal     No     Windows Gather Apache Tomcat Enumeration
