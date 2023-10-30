@@ -1,0 +1,10 @@
+vulnerability on website (209.97.140.29:32753) which still on development. When opening the website url, user will got a login&register page, after user successfuly register and login from that page, user will have a blank page with just a text box saying the web is still on development.
+
+The company provide the source code of the web.
+
+After surfing the provided source code, I found some info how the login process is happening. From helpers/JWTHelper.js, I found that the website are using jsonwebtoken dependecy to process the token, and the token are using RS256 and HS256 for the publicKey.
+From helpers/DBHelper.js, I found that how the website try to process (getUser, checkUser, createUser, attemptLogin) an info from the database are using a raw query which is lack of sanitation.
+
+From this there is an indication of sqli using public token.
+
+To prove this vulnerabilty, i found a Authentication Bypass on  jsonwebtoken package, versions <4.2.2 (https://security.snyk.io/vuln/npm:jsonwebtoken:20150331). using the same process as the mentioned vulnerabilty, i use chrome browser inspect element to see the token after logged in into the website. The token then, decoded using https://jwt.io/. From this i can get the public key which later will be used. After that, using jwt_tool (https://github.com/ticarpi/jwt_tool) and the information i have gathered, i try to inject some payload. Such as `python3 ./jwt_tool.py $(cat /home/kali/Documents/learnCyberSec/htb/UnderConstruction/token) -I -pc username -pv "test2' and 1=0 union all select 1, group_concat(sql),1 from sqlite_master--" -X k -pk /home/kali/Documents/learnCyberSec/htb/UnderConstruction/keyPublic.pem`. Because of the lack of sanitation on the backend of the website, i can inject a sql query to get all of the table that are on the database used by the website.
